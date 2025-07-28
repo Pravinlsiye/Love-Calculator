@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include<malloc.h>
-#include<string.h>
+#include <stdlib.h>
+#include <string.h>
 struct node 
 {
     int data;
@@ -49,7 +49,7 @@ int main()
 {
     int a=6;
     struct node *head,*ptr,*previous;
-    ptr=(struct node *)malloc(sizeof(struct node *));
+    ptr=(struct node *)malloc(sizeof(struct node));
     if(ptr!=NULL)
     {
         ptr->data=1;
@@ -59,7 +59,7 @@ int main()
     head=ptr;
     for(int i=1;i<a;i++)
     {
-        previous=(struct node *)malloc(sizeof(struct node *));
+        previous=(struct node *)malloc(sizeof(struct node));
         if(previous!=NULL){
         previous->data=i+1;
         previous->next=NULL;
@@ -73,7 +73,9 @@ int main()
     head=ptr;
     int b;
     char firstname[100],second[100];
+    printf("Enter first name: ");
     scanf("%s",firstname);
+    printf("Enter second name: ");
     scanf("%s",second);
     int len,temp=0,count=0;
     if(strlen(firstname)>=strlen(second))
@@ -120,6 +122,7 @@ int main()
     }
     else
     {
-        printf("poi mas* pannu");
+        printf("Perfect Match!");
     }
-}c
+    return 0;
+}
