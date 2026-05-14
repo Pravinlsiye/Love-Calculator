@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #f5f3ff;
+  background: #05030f;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: linear-gradient(
+    180deg,
+    rgba(124, 92, 255, 0.08) 0%,
+    rgba(34, 211, 238, 0.04) 100%
+  );
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #a78bfa 25%,
+    #67e8f9 50%,
+    #a78bfa 75%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+input,
+textarea {
+  color: #f5f3ff;
+  caret-color: #22d3ee;
+  background-color: #0a0820;
+}
+
+input {
+  color: #22d3ee;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(167, 139, 250, 0.45);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #0a0820 inset !important;
+  -webkit-text-fill-color: #22d3ee !important;
+  caret-color: #22d3ee !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+::selection {
+  background: rgba(124, 92, 255, 0.4);
+  color: #fff;
+}
